@@ -1,7 +1,47 @@
 body{
     font-family: 'Courier New', Courier, monospace;
-    background-color: #f0f0f0;
+    background-color: #C6D8AF;
     color: #333;
     margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+nav{
+    background-color: #FCC8B2;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 100px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+nav a {
+    padding-bottom: 100px;
+    text-decoration: none;
+    color: #685369;
+    display: block;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a:hover {
+    color: #F2F2F2;
+    background-color: #685369;
+
+}
+
+main {
+    margin-left: 120px; /* Add a left margin to avoid the sidebar */
     padding: 20px;
 }
