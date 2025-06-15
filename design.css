@@ -45,3 +45,20 @@ main {
     margin-left: 120px; /* Add a left margin to avoid the sidebar */
     padding: 20px;
 }
+
+.links {
+    text-align: center;
+}
+
+.links a {
+    margin: 10px 0;
+    padding: 12px 20px;
+    background-color: #FCC8B2;
+    color: black;
+    border-radius: 1000px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    background-color: #685369;
+}
