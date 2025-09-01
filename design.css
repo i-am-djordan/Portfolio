@@ -1,3 +1,180 @@
+/* Resume and About Me side-by-side layout */
+.resume-about-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.resume-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(104,83,105,0.12);
+    margin-top: 2rem;
+}
+
+.about-paragraph {
+    max-width: 500px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.mouse-follower {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #C8A2C8; 
+    border-radius: 50%; 
+    pointer-events: none; 
+    z-index: 9999;
+    transform: translate(-50%, -50%); 
+    transition: transform 0.1s ease-out; 
+}
+
+.intro-cool {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 60vh;
+    overflow: hidden;
+    padding-left: 2vw;
+}
+
+.intro-cool-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: none;
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.intro-cool-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 48px 32px;
+}
+
+.intro-cool-greeting {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+}
+
+.intro-cool-name {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #000;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.5em;
+    letter-spacing: 2px;
+}
+
+.cool-aka {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fff;
+    background: #685369;
+    border-radius: 12px;
+    padding: 2px 10px;
+    margin-left: 8px;
+    box-shadow: 0 2px 8px rgba(104,83,105,0.12);
+}
+
+.cool-underline {
+    display: block;
+    width: 80%;
+    height: 10px;
+    background: url('data:image/svg+xml;utf8,<svg width="100%" height="10" viewBox="0 0 100 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 5 Q 25 0 50 5 Q 75 10 100 5" stroke="%23FCC8B2" stroke-width="3" fill="none"/></svg>');
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+.intro-cool-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+    margin-top: 1em;
+    letter-spacing: 1px;
+}
+
+.cool-animate {
+    animation: coolBounce 1.2s cubic-bezier(.68,-0.55,.27,1.55) 1;
+}
+
+@keyframes coolBounce {
+    0% { transform: scale(0.7) translateY(-40px); opacity: 0; }
+    60% { transform: scale(1.1) translateY(10px); opacity: 1; }
+    80% { transform: scale(0.95) translateY(-4px); }
+    100% { transform: scale(1) translateY(0); }
+}
+
+/* Intro Section Styles */
+.intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.intro-container {
+    background: linear-gradient(135deg, #FCC8B2 60%, #C6D8AF 100%);
+    padding: 48px 32px;
+    border-radius: 32px;
+    box-shadow: 0 8px 32px rgba(104,83,105,0.12);
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+.intro-greeting {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    color: #685369;
+}
+
+.intro-iam {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.intro-name {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5em;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.intro-name .aka {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #685369;
+    background: #F2F2F2;
+    border-radius: 12px;
+    padding: 2px 10px;
+    margin-left: 8px;
+}
+
+.intro-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #685369;
+    margin-top: 1em;
+    letter-spacing: 1px;
+}
 body{
     font-family: 'Courier New', Courier, monospace;
     background-color: #C6D8AF;
@@ -7,58 +184,122 @@ body{
     text-align: center;
 }
 
-nav{
+nav {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
     background-color: #FCC8B2;
+    height: 50px;
     padding: 10px;
-    text-align: center;
-    position: fixed;
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 100px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -19px;
 }
 
 nav a {
-    padding-bottom: 100px;
+    color: #333;
     text-decoration: none;
-    color: #685369;
-    display: block;
-    border-radius: 5px;
+}
+
+.nav-icons {
+    display: flex;
+    font-size: large;
+    gap: 1rem;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 0;
+    padding: 20px;
+}
+
+nav li{
+    display: inline;
+    margin-right: 200px;
 }
 
 nav a:hover {
     color: #F2F2F2;
-    background-color: #685369;
+    background-color: #C8A2C8;
+    text-decoration: none;  
+    padding: 8px 20px;
+    border-radius: 8px;
+}
 
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 main {
-    margin-left: 120px; /* Add a left margin to avoid the sidebar */
+    
     padding: 20px;
 }
 
-.links {
-    text-align: center;
+.intro{
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.links a {
-    margin: 10px 0;
-    padding: 12px 20px;
-    background-color: #FCC8B2;
+.container {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border-width: 10px;
+  border-color: #FCC8B2;
+  border-style: outset;
+
+}
+
+.container {
+width: 500px;
+height: 500px;
+}
+
+.rotating-list-container {
+  width: 500px; 
+  height: 100px; 
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.rotating-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  animation: scroll-up 15s linear infinite; /* Adjust duration and timing */
+}
+
+.rotating-list li {
+  padding: 5px;
+  text-align: center;
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%); /* Adjust based on list height */
+  }
+}
+    
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about a{
     color: black;
-    border-radius: 1000px;
     text-decoration: none;
 }
 
-.links a:hover {
-    background-color: #685369;
+.about a:hover{
+    background-color: #C8A2C8;
 }

@@ -4,26 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="design.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Portfolio</title>
 </head>
 <body>
     <nav>
-        <ul>
+        <ul class="nav-list">
             <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="projects.html">PROJECTS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
+            <div class="nav-icons">
+                <a href="https://www.linkedin.com/in/jordan-destiny" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/i-am-djordan" target="_blank"><i class="fa fa-github"></i></a>
+            </div>
     </nav>
     <main>
-        <section>
-            <p>Hi, I am</p>
-            <h1>Destiny Jordan aka DJ</h1>
-            <h2>Aspiring Frontend Software Developer</h2>
+        <div class="mouse-follower"></div>
+        <script src="script.js"></script>
+        <script src="pdfjs-dist.min.js"></script>
+        <section class="intro-cool">
+            <div class="intro-cool-bg"></div>
+            <div class="intro-cool-content">
+                <h1 class="intro-cool-greeting">Hi! I am</h1>
+                <h1 class="intro-cool-name cool-animate">
+                    Destiny Jordan
+                    <span class="cool-underline"></span>
+                </h1>
+                <div class="rotating-list-container">
+                    <ul class="rotating-list" id="rotating-list">
+                        <li>Aspiring Frontend Software Engineer</li>
+                        <li>Aspiring Web Developer</li>
+                        <li>Current BS/MS Student majoring in Software Engineering</li>
+                    </ul>
+                </div>
+            </div>
+            <img src="MichMe.JPEG" alt="Me wearing a Michigan hoodie because Michigan is the best" class="container">
         </section>
-        <section class="links">
-            <a href="about.html">Learn More About Me</a>
-            <a href="projects.html"> View My Projects</a>
+        <section id="about" class="about">
+            <br>
+            <br>
+            <br>
+                <div class="resume-about-container">
+                    <div class="about-paragraph">
+                        <h2>About Me</h2>
+                        <p>Hi, I am Destiny Jordan, but call me DJ. I'm a junior at the University of Michigan - Flint and majoring in Software Engineering.
+                        In university, I am enrolled in a Bachelor to Master's program, which allows me to complete my Bachelor's degree in Software Engineering and then continue on to a Master's degree in the same field.
+                        I was also dual enrolled during high school so I've been able to take college courses early, which has given me a head start in my education.
+                        I really enjoy learning and expanding my knowledge in the field of software engineering and hope to apply what I learn in my future career.
+                        I have a passion for Front End Development and Software Engineering. I enjoy creating web applications and learning new technologies.
+                        Even though I am still a student, I have been able to gain some experience in the field through my coursework and personal projects.
+                        I am always eager to learn and improve my skills, and I am excited about the opportunities that lie ahead in my career.
+                        In my free time, I enjoy creating projects, crocheting, and spending time with my family and friends. I also love taking care of my plants and watching them grow.
+                        Thank you for taking the time to learn more about me. I hope to connect with you and share my journey in software engineering.</p>
+                    </div>
+                    <div class="resume-image">
+                        <img src="Resume.jpg" alt="Resume" style="width:100%;max-width:500px;">
+                    </div>
+                </div>
+                <h3><a href="Destiny Jordan Resume.pdf" target="_blank">Click here to view my resume!</a></h3>
+        </section>
+
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Here are some of the projects I've worked on recently:</p>
+            <ul>
+                <li><strong>Project 1:</strong> A responsive e-commerce website built with React and Tailwind CSS.</li>
+                <li><strong>Project 2:</strong> A personal blog platform developed using Next.js and Markdown.</li>
+                <li><strong>Project 3:</strong> A task management app created with Vue.js and Firebase.</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h1>Contact Me</h1>
+            <p>If you would like to get in touch with me, feel free to reach out via email or connect with me on social media.</p>
+            <p>Email: <a href="mailto:jordan.destiny05@gmail.com">jordan.destiny05@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/jordan-destiny" target="_blank">Destiny Jordan</a></p>
+            <p>GitHub: <a href="https://github.com/i-am-djordan" target="_blank">@i-am-djordan</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/djcreateswebsites/" target="_blank">@DJCreatesWebsites</a></p>
+            <p>Feel free to reach out if you have any questions, want to collaborate on a project, or just want to say hi!</p>
         </section>
     </main>
 </body>
