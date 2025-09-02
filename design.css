@@ -187,7 +187,7 @@ body{
 
 nav {
     display: flex;
-    position: sticky;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     background-color: #FCC8B2;
@@ -207,16 +207,18 @@ nav a {
     display: flex;
     font-size: large;
     gap: 1rem;
+    padding: 10px;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 20px;
+    padding: 0;
 }
 
 nav li{
     display: inline;
     margin-right: 200px;
+    margin-left: 19px;
 }
 
 nav a:hover {
@@ -231,7 +233,7 @@ nav ul {
     display: flex;
     gap: 2rem;
     list-style: none;
-    margin: 0;
+    margin: 10;
     padding: 0;
 }
 
