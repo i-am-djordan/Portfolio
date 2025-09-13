@@ -188,14 +188,25 @@ body{
 nav {
     display: flex;
     position: fixed;
-    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    justify-content: center; /* Center navbar content */
     align-items: center;
     background-color: #FCC8B2;
     height: 50px;
-    padding: 10px;
-    margin-top: -20px;
-    margin-left: -20px;
-    margin-right: -19px;
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(104,83,105,0.08);
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem; /* Increased gap for more spacing */
+    width: 100%;
 }
 
 nav a {
@@ -203,22 +214,23 @@ nav a {
     text-decoration: none;
 }
 
+nav ul {
+    display: flex;
+    gap: 10rem; /* Slightly increased gap between links */
+    list-style: none;
+    margin: 0;
+    padding: 0 24px;
+    align-items: center;
+    justify-content: center;
+}
+
 .nav-icons {
     display: flex;
     font-size: large;
-    gap: 1rem;
-    padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav li{
-    display: inline;
-    margin-right: 200px;
-    margin-left: 19px;
+    gap: 2.5rem; /* Increased gap between icons */
+    padding: 10px 24px;
+    align-items: center;
+    justify-content: center;
 }
 
 nav a:hover {
@@ -229,22 +241,16 @@ nav a:hover {
     border-radius: 8px;
 }
 
-nav ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    margin: 10;
-    padding: 0;
-}
-
 main {
     
     padding: 20px;
 }
 
-.intro{
-    color: #333;
-    margin-bottom: 20px;
+.intro-cool{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
 }
 
 .container {
@@ -267,7 +273,7 @@ height: 500px;
   width: 500px; 
   height: 100px; 
   overflow: hidden;
-  border: 1px solid #ccc;
+
 }
 
 .rotating-list {
@@ -305,4 +311,122 @@ height: 500px;
 
 .about a:hover{
     background-color: #C8A2C8;
+}
+
+.about-paragraph{
+    text-align: justify;
+    width: 500px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: auto) {
+    .resume-about-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .resume-image img,
+    .about-paragraph {
+        max-width: 90vw;
+    }
+    .container,
+    .rotating-list-container {
+        width: 90vw;
+        max-width: 400px;
+    }
+    .nav-content {
+        gap: 2rem; /* Maintain spacing on tablet */
+    }
+    nav ul {
+        gap: 1.5rem;
+        padding: 0 8px;
+    }
+    .nav-icons {
+        gap: 1.2rem;
+        padding: 10px 8px;
+    }
+}
+
+@media (max-width: auto) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        margin: 0;
+        width: 100vw;
+        align-items: center;
+    }
+    .nav-content {
+        flex-direction: column;
+        gap: 1.2rem; /* More vertical spacing on mobile */
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        padding: 0;
+        justify-content: center;
+    }
+    .nav-icons {
+        justify-content: center;
+        gap: 1rem;
+        padding: 5px 0;
+    }
+    nav li {
+        margin: 0;
+    }
+    .intro-cool,
+    .intro-section {
+        min-height: 40vh;
+        padding-left: 0;
+    }
+    .intro-cool-content,
+    .intro-container {
+        padding: 24px 8px;
+    }
+    .container,
+    .rotating-list-container {
+        width: 95vw;
+        max-width: 300px;
+        height: auto;
+    }
+}
+
+@media (max-width: auto) {
+    body {
+        padding: 8px;
+    }
+    .intro-cool-greeting,
+    .intro-greeting {
+        font-size: 1.3rem;
+    }
+    .intro-cool-name,
+    .intro-name {
+        font-size: 2rem;
+    }
+    .intro-cool-title,
+    .intro-title,
+    .intro-iam {
+        font-size: 1rem;
+    }
+    .about-paragraph {
+        font-size: 1rem;
+        padding: 0 4px;
+    }
+    .container,
+    .rotating-list-container {
+        width: 98vw;
+        max-width: 98vw;
+        height: auto;
+    }
+    .resume-image img {
+        max-width: 98vw;
+    }
+    .cool-underline {
+        width: 95%;
+        height: 6px;
+    }
 }
