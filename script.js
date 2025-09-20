@@ -1,10 +1,16 @@
 // Mouse Follower JS
-if (window.innerWidth > 768) {
-  const follower = document.querySelector(".mouse-follower");
+const follower = document.querySelector(".mouse-follower");
+
+// Check if it's a touch device
+if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+  if (follower) follower.style.display = "none";
+} else {
+  // Desktop only
   document.addEventListener("mousemove", (e) => {
     follower.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
   });
 }
+
 // Rotating list JS
 const rotatingList = document.getElementById('rotating-list');
 if (rotatingList) {
