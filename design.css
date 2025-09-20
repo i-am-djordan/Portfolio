@@ -402,6 +402,11 @@ main {
         padding-top: 60px;
     }
 
+    /*Disable Mouse Follower*/
+    .mouse-follower {
+        display: none;
+    }
+
     /*Navigation*/
     nav {
         flex-direction: row;
