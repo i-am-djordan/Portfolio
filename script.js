@@ -18,5 +18,13 @@ if (rotatingList) {
         items[current].style.display = 'none';
         current = (current + 1) % items.length;
         items[current].style.display = 'block';
-    }, 2000); // Change every 2 seconds
+    }, 2000)
 }
+
+// Hamburger Menu JS
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector("nav ul");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
