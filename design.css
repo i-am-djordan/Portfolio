@@ -300,8 +300,11 @@ height: 500px;
     
 .about{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
 }
 
 .about a{
@@ -319,7 +322,117 @@ height: 500px;
     font-size: 1.1rem;
 }
 
-@media (max-width: auto) {
+.projects-header{
+    text-align: justify;
+    width: 500px;
+    font-size: 1.1rem;
+    max-width: 1200px;
+    margin-left: 100px;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin-left: 100px;
+    margin: auto;
+}
+
+.project-card {
+    background-color: #FCC8B2;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* new: box that holds only the visible image */
+.project-card .image-box {
+    width: 100%;
+    height: 200px; /* adjust box height as desired */
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+}
+
+/* make the image fill the box and keep aspect by cropping */
+.project-card .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* keep title and description below the image box */
+.project-card h3 {
+    margin: 0.25rem 0 0;
+}
+
+.project-card p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.contact-pic{
+    flex: 0 0 320px; /* fixed column for image */
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(104,83,105,0.12);
+    margin-top: 0;
+}
+
+.contact-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.contact-paragraph{
+    flex: 1 1 320px;
+    min-width: 260px;
+    max-width: 500px;
+    text-align: justify;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column-reverse; /* image below text on small screens */
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .contact-pic {
+        max-width: 90vw;
+    }
+    .contact-paragraph {
+        max-width: 90vw;
+    }
+}
+
+@media (max-width: 768px) {
     .resume-about-container {
         flex-direction: column;
         align-items: center;
@@ -347,7 +460,7 @@ height: 500px;
     }
 }
 
-@media (max-width: auto) {
+@media (max-width: 768px) {
     nav {
         flex-direction: column;
         height: auto;
@@ -395,7 +508,7 @@ height: 500px;
     }
 }
 
-@media (max-width: auto) {
+@media (max-width: 768px) {
     body {
         padding: 8px;
     }
@@ -428,5 +541,11 @@ height: 500px;
     .cool-underline {
         width: 95%;
         height: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr; /* collapse to 1 column on smaller screens */
     }
 }
