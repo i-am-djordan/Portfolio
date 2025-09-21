@@ -264,27 +264,16 @@ main {
 
 .about-paragraph{
     text-align: justify;
-    width: 500px;
+    max-width: 1000px;
     font-size: 1.1rem;
-    max-width: 500px;
     line-height: 1.6;
 }
 
-.resume-about-container {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-}
-
-.resume-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 12px;
+.paragraph{
+    background-color: #FCC8B2;
+    padding: 10px;
     box-shadow: 0 4px 16px rgba(104,83,105,0.12);
-    margin-top: 2rem;
+    border-radius: 50px;
 }
 
 /* Projects Section */
